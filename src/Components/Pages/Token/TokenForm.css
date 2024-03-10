@@ -1,0 +1,32 @@
+/* Custom Hover Styles */
+.hover-danger:hover {
+  background-color: #dc3545; /* Danger color when hovered */
+  border-color: #dc3545;
+  color: #fff; /* Text color when hovered */
+}
+
+.hover-warning:hover {
+  background-color: #ffc107; /* Warning color when hovered */
+  border-color: #ffc107;
+  color: #212529; /* Text color when hovered */
+}
+
+.hover-success:hover {
+  background-color: #28a745; /* Success color when hovered */
+  border-color: #28a745;
+  color: #fff; /* Text color when hovered */
+}
+
+#statusAssigned:checked + .btn-outline-danger::before,
+#statusNew:checked + .btn-outline-warning::before,
+#statusClosed:checked + .btn-outline-success::before {
+  content: '\2022'; /* Unicode character for a dot */
+  margin-right: 5px; /* Adjust the spacing as needed */
+}
+
+/* Remove the border from the buttons */
+#statusAssigned + .btn-outline-danger,
+#statusNew + .btn-outline-warning,
+#statusClosed + .btn-outline-success {
+  border: none;
+}
